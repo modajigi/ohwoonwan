@@ -1,10 +1,10 @@
-import { Image } from 'next/image';
-const Header = () => {
+import Logo from '@/components/commons/Logo';
+
+export default function Header() {
   return (
-    <header className="flex items-center justify-center w-full h-20 bg-gray-200">
-      <div className="flex items-center justify-center">123123</div>
+    <header className="flex items-center justify-center sticky top-0 h-[60px] w-full max-w-[500px] z-10 bg-white">
+      <Logo />
     </header>
   );
 };
 
-export default Header;
