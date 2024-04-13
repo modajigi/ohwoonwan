@@ -5,7 +5,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: '오운완',
+  title: {
+    default: '오운완',
+    template: '%s | 오운완',
+  },
   description: '오늘의 운세를 알려드림',
 };
 

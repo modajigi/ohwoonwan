@@ -1,3 +1,4 @@
+// component
 import Logo from '@/components/commons/Logo';
 
 export default function Header() {

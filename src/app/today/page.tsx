@@ -1,11 +1,23 @@
-import MainLayout from '@/layout/MainLayout';
+import { Metadata } from 'next';
 
-const today = () => {
+// layout
+import MainLayout from '@/layout/MainLayout';
+// component
+import Counter from './CounterTest';
+
+export const metadata: Metadata = {
+  title: '오늘의 운세',
+  description: '오늘의 운세',
+};
+
+const Today = () => {
   return (
     <MainLayout>
-      <main className="bg-blue-500 h-screen w-full flex items-center justify-center">123</main>
+      <main className="bg-blue-500 h-screen w-full flex items-center justify-center">
+        <Counter />
+      </main>
     </MainLayout>
   );
 };
 
-export default today;
+export default Today;

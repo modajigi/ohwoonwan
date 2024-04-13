@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+// layout
 import MainLayout from '@/layout/MainLayout';
 
 export default function Home() {
