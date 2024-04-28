@@ -1,21 +1,38 @@
-import Link from 'next/link';
-
-// layout
 import MainLayout from '@/layout/MainLayout';
 
-export default function Home() {
+import Card from '@/components/home/Card';
+
+interface CardData {
+  imageUrl: string;
+  text: string;
+  link: string;
+}
+
+const Home = (): JSX.Element => {
+  const cards: CardData[] = [
+    {
+      imageUrl: "/images/thumbnail-maker_2024428.png",
+      text: "Fortune",
+      link: "/fortune"
+    },
+    {
+      imageUrl: "/images/thumbnail-maker_2024428.png",
+      text: "Today",
+      link: "/today"
+    }
+  ];
+
   return (
     <MainLayout>
-      <main className="bg-red-500 h-screen w-full flex items-center justify-center">
-        <div className="flex flex-col gap-4">
-          <Link href="/fortune" passHref>
-            <button className="text-white font-bold py-2 px-4 rounded">Fortune</button>
-          </Link>
-          <Link href="/today" passHref>
-            <button className="text-white font-bold py-2 px-4 rounded">Today</button>
-          </Link>
+      <main className="flex items-center justify-center w-full h-screen bg-red-500">
+        <div className="grid grid-cols-1 gap-4 p-4">
+          {cards.map((card, index) => (
+            <Card key={index} imageUrl={card.imageUrl} text={card.text} link={card.link} />
+          ))}
         </div>
       </main>
     </MainLayout>
   );
-}
+};
+
+export default Home;
