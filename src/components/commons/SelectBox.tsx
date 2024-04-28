@@ -15,7 +15,9 @@ function SelectBox({ options, value, placeholder, onChange }: SelectBoxProps) {
         value={value}
         onChange={onChange}
       >
-        <option value="" disabled>{placeholder}</option>
+        <option value="" disabled>
+          {placeholder}
+        </option>
         {options.map((option) => (
           <option key={option} value={option}>
             {option}
