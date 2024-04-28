@@ -5,7 +5,8 @@ interface StoreState {
     selectBox1: string;
     selectBox2: string;
     selectBox3: string;
-    selectedButton: string; // 버튼 선택 상태
+    selectedButton1: string; 
+    selectedButton2: string; 
   };
   setSelection: (key: string, value: string) => void;
 }
@@ -15,7 +16,8 @@ export const useStore = create<StoreState>((set) => ({
     selectBox1: '',
     selectBox2: '',
     selectBox3: '',
-    selectedButton: ''
+    selectedButton1: '',
+    selectedButton2: '',
   },
   setSelection: (key, value) => set((state) => ({
     selections: { ...state.selections, [key]: value }
