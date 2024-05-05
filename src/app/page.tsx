@@ -11,20 +11,20 @@ interface CardData {
 const Home = (): JSX.Element => {
   const cards: CardData[] = [
     {
-      imageUrl: "/images/thumbnail-maker_2024428.png",
-      text: "Fortune",
+      imageUrl: "/images/oh.png",
+      text: "내 사주가 궁금하다면?",
       link: "/fortune"
     },
     {
-      imageUrl: "/images/thumbnail-maker_2024428.png",
-      text: "Today",
+      imageUrl: "/images/oh-today.png",
+      text: "오늘의 운세가 궁금하다면?",
       link: "/today"
     }
   ];
 
   return (
     <MainLayout>
-      <main className="flex items-center justify-center w-full h-screen bg-red-500">
+      <main className="flex items-center justify-center w-full h-screen bg-white">
         <div className="grid grid-cols-1 gap-4 p-4">
           {cards.map((card, index) => (
             <Card key={index} imageUrl={card.imageUrl} text={card.text} link={card.link} />
