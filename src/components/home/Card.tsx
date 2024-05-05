@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card = ({ imageUrl, text, link }: CardProps): JSX.Element => {
   return (
-    <div className="block overflow-hidden text-center rounded-lg shadow-lg">
+    <div className="block overflow-hidden text-center border border-black rounded-lg shadow-lg">
       <Link href={link} passHref>
         <div className="relative w-full" style={{ paddingTop: "5px" }}> 
           <Image
@@ -22,7 +22,7 @@ const Card = ({ imageUrl, text, link }: CardProps): JSX.Element => {
           />
         </div>
       </Link>
-      <div className="p-4 bg-white">
+      <div className="p-4 bg-white marker:">
         <p className="text-lg font-bold">{text}</p>
       </div>
     </div>
