@@ -9,6 +9,8 @@ const useRouteTitle = (): string => {
       return "오늘의 운세";
     case "/fortune":
       return "🌙 사주";
+    case "/tarot":
+      return "🌙 타로";
     default:
       return "";
   }
