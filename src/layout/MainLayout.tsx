@@ -1,26 +1,29 @@
-import React from 'react';
+"use client"
 
-// layout
-import Header from './RootLayout/Header';
+import React, { Suspense } from "react";
+import { usePathname } from "next/navigation";
+
+const HomeHeader = React.lazy(() => import("./RootLayout/Header"));
+const ChatHeader = React.lazy(() => import("./Chat/Header"));
 
 interface LayoutProps {
   children: React.ReactNode;
-  noHeader?: boolean;
-  noFooter?: boolean;
 }
 
-export default function Layout (props: LayoutProps) {
-  const { children, noHeader, noFooter } = props;
+export default function Layout(props: LayoutProps) {
+  const { children } = props;
+  const pathname = usePathname();
+
+  const Header = pathname === '/' ? HomeHeader : ChatHeader;
 
   return (
-    <div className="bg-gray-200 min-h-screen flex justify-center">
-      <div className="flex flex-col w-full max-w-[500px]">
-        {!noHeader && <Header />}
-        <main className="flex-1">
-          {children}
-        </main>
-        {/* {!noFooter && <Footer />} */}
-      </div>
-    </div>
+    <main className="flex justify-center min-h-screen bg-gray-200">
+      <section className="flex flex-col w-full max-w-[500px] bg-gradient-to-b from-[#FFBE98] to-white">
+        <Suspense fallback={<p>Loading</p>}>
+          <Header />
+        </Suspense>
+        {children}
+      </section>
+    </main>
   );
-};
+}

@@ -17,8 +17,8 @@ const Home = (): JSX.Element => {
     },
     {
       imageUrl: "/images/oh-today.png",
-      text: "오늘의 운세가 궁금하다면?",
-      link: "/today"
+      text: "오늘의 타로가 궁금하다면?",
+      link: "/tarot"
     }
   ];
 
