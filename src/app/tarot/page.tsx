@@ -1,9 +1,6 @@
 import { Metadata } from "next";
-
 import MainLayout from "@/layout/MainLayout";
-import Header from "@/layout/Chat/Header";
-import MainContent from "@/components/chat/MainContent";
-import Card from "@/components/tarot/Card";
+import CardsContainer from "@/components/tarot/CardContainer";
 
 export const metadata: Metadata = {
   title: "타로",
@@ -13,7 +10,7 @@ export const metadata: Metadata = {
 const Tarot = () => {
   return (
     <MainLayout>
-      <Card />
+      <CardsContainer />
     </MainLayout>
   );
 };

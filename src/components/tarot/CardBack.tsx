@@ -8,7 +8,12 @@ interface CardBackProps {
 const CardBack = ({ imageSrc }: CardBackProps) => {
   return (
     <div className="absolute w-full h-full transform bg-white rounded-lg shadow-lg rotate-y-180 backface-visibility-hidden">
-      <Image src={imageSrc} alt="Back of Card" layout="fill" objectFit="cover" />
+      <Image
+        src={imageSrc}
+        alt="Back of Card"
+        layout="fill"
+        objectFit="cover"
+      />
     </div>
   );
 };
