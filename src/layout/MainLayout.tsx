@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { Suspense } from "react";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
   const { children } = props;
   const pathname = usePathname();
 
-  const Header = pathname === '/' ? HomeHeader : ChatHeader;
+  const Header = pathname === "/" ? HomeHeader : ChatHeader;
 
   return (
     <main className="flex justify-center min-h-screen bg-gray-200">
