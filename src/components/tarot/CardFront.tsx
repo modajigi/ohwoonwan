@@ -7,7 +7,7 @@ interface FrontCardProps {
 
 const FrontCard = ({ imageSrc }: FrontCardProps) => {
   return (
-    <div className="absolute w-full h-full bg-white rounded-lg shadow-lg backface-visibility-hidden">
+    <div className="absolute w-full h-full bg-white rounded-lg shadow-lg">
       <Image
         src={imageSrc}
         alt="Front of Card"
